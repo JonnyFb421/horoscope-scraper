@@ -1,0 +1,154 @@
+horoscope:
+  'urls':
+    aries:       https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=1
+    taurus:      https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=2
+    gemini:      https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=3
+    cancer:      https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=4
+    leo:         https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=5
+    virgo:       https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=6
+    libra:       https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=7
+    scorpio:     https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=8
+    sagittarius: https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=9
+    capricorn:   https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=10
+    aquarius:    https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=11
+    pisces:      https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=12
+  'selector': ["div", "class": "horoscope-content"]
+  'selector_is_unique': false
+  'use_regex': true
+  'match_start': ''
+  'match_end': '\n'
+
+astrology:
+  'urls':
+    aries:       https://www.astrology.com/horoscope/daily/aries.html
+    taurus:      https://www.astrology.com/horoscope/daily/taurus.html
+    gemini:      https://www.astrology.com/horoscope/daily/gemini.html
+    cancer:      https://www.astrology.com/horoscope/daily/cancer.html
+    leo:         https://www.astrology.com/horoscope/daily/leo.html
+    virgo:       https://www.astrology.com/horoscope/daily/virgo.html
+    libra:       https://www.astrology.com/horoscope/daily/libra.html
+    scorpio:     https://www.astrology.com/horoscope/daily/scorpio.html
+    sagittarius: https://www.astrology.com/horoscope/daily/sagittarius.html
+    capricorn:   https://www.astrology.com/horoscope/daily/capricorn.html
+    aquarius:    https://www.astrology.com/horoscope/daily/aquarius.html
+    pisces:      https://www.astrology.com/horoscope/daily/pisces.html
+  'selector': ["div", "class": "daily-horoscope text-center"]
+  'selector_is_unique': false
+  'use_regex': true
+  'match_start': 'Tomorrow\n\n\n'
+  'match_end': '\n'
+
+astrostyle:
+  urls:
+    aries:       http://astrostyle.com/daily-horoscopes/aries-daily-horoscope/
+    taurus:      http://astrostyle.com/daily-horoscopes/taurus-daily-horoscope/
+    gemini:      http://astrostyle.com/daily-horoscopes/gemini-daily-horoscope/
+    cancer:      http://astrostyle.com/daily-horoscopes/cancer-daily-horoscope/
+    leo:         http://astrostyle.com/daily-horoscopes/leo-daily-horoscope/
+    virgo:       http://astrostyle.com/daily-horoscopes/virgo-daily-horoscope/
+    libra:       http://astrostyle.com/daily-horoscopes/libra-daily-horoscope/
+    scorpio:     http://astrostyle.com/daily-horoscopes/scorpio-daily-horoscope/
+    sagittarius: http://astrostyle.com/daily-horoscopes/sagittarius-daily-horoscope/
+    capricorn:   http://astrostyle.com/daily-horoscopes/capricorn-daily-horoscope/
+    aquarius:    http://astrostyle.com/daily-horoscopes/aquarius-daily-horoscope/
+    pisces:      http://astrostyle.com/daily-horoscopes/pisces-daily-horoscope/
+  'selector': ["div", "class": "weekday_div"]
+  'selector_is_unique': false
+  'use_regex': true
+  'match_start': 'Weekend'
+  'match_end': ''
+
+cainer:
+  'urls':
+    aries:       https://www.cainer.com/daily-horoscope/ariest.html
+    taurus:      https://www.cainer.com/daily-horoscope/taurust.html
+    gemini:      https://www.cainer.com/daily-horoscope/geminit.html
+    cancer:      https://www.cainer.com/daily-horoscope/cancert.html
+    leo:         https://www.cainer.com/daily-horoscope/leot.html
+    virgo:       https://www.cainer.com/daily-horoscope/virgot.html
+    libra:       https://www.cainer.com/daily-horoscope/librat.html
+    scorpio:     https://www.cainer.com/daily-horoscope/scorpiot.html
+    sagittarius: https://www.cainer.com/daily-horoscope/sagitt.html
+    capricorn:   https://www.cainer.com/daily-horoscope/caprict.html
+    aquarius:    https://www.cainer.com/daily-horoscope/aquariut.html
+    pisces:      https://www.cainer.com/daily-horoscope/piscest.html
+  'selector': ["p", "align": "justify"]
+  'selector_is_unique': false
+  'use_regex': true
+  'match_start': ''
+  'match_end': 'The road to the future has its twists and turns'
+
+clickastro:
+  'urls':
+    aries:       http://www.clickastro.com/aries-horoscope-daily?ref=HomePage
+    taurus:      http://www.clickastro.com/taurus-horoscope-daily?ref=HomePage
+    gemini:      http://www.clickastro.com/gemini-horoscope-daily?ref=HomePage
+    cancer:      http://www.clickastro.com/cancer-horoscope-daily?ref=HomePage
+    leo:         http://www.clickastro.com/leo-horoscope-daily?ref=HomePage
+    virgo:       http://www.clickastro.com/virgo-horoscope-daily?ref=HomePage
+    libra:       http://www.clickastro.com/libra-horoscope-daily?ref=HomePage
+    scorpio:     http://www.clickastro.com/scorpio-horoscope-daily?ref=HomePage
+    sagittarius: http://www.clickastro.com/sagittarius-horoscope-daily?ref=HomePage
+    capricorn:   http://www.clickastro.com/capricorn-horoscope-daily?ref=HomePage
+    aquarius:    http://www.clickastro.com/aquarius-horoscope-daily?ref=HomePage
+    pisces:      http://www.clickastro.com/pisces-horoscope-daily?ref=HomePage
+  'selector': ["div", "id": "today-pred"]
+  'selector_is_unique': true
+  'use_regex': false
+
+astrocenter:
+  'urls':
+    aries:       http://www.astrocenter.com/us/horoscope-daily.aspx?When=0&ZSign=0&Af=0
+    taurus:      http://www.astrocenter.com/us/horoscope-daily.aspx?When=0&ZSign=1&Af=0
+    gemini:      http://www.astrocenter.com/us/horoscope-daily.aspx?When=0&ZSign=2&Af=0
+    cancer:      http://www.astrocenter.com/us/horoscope-daily.aspx?When=0&ZSign=3&Af=0
+    leo:         http://www.astrocenter.com/us/horoscope-daily.aspx?When=0&ZSign=4&Af=0
+    virgo:       http://www.astrocenter.com/us/horoscope-daily.aspx?When=0&ZSign=5&Af=0
+    libra:       http://www.astrocenter.com/us/horoscope-daily.aspx?When=0&ZSign=6&Af=0
+    scorpio:     http://www.astrocenter.com/us/horoscope-daily.aspx?When=0&ZSign=7&Af=0
+    sagittarius: http://www.astrocenter.com/us/horoscope-daily.aspx?When=0&ZSign=8&Af=0
+    capricorn:   http://www.astrocenter.com/us/horoscope-daily.aspx?When=0&ZSign=9&Af=0
+    aquarius:    http://www.astrocenter.com/us/horoscope-daily.aspx?When=0&ZSign=10&Af=0
+    pisces:      http://www.astrocenter.com/us/horoscope-daily.aspx?When=0&ZSign=11&Af=0
+  'selector': ["div", "id": "textline"]
+  'selector_is_unique': true
+  'use_regex': false
+
+astroyogi:
+  'urls':
+    aries:       https://www.astroyogi.com/horoscopes/daily/aries-free-horoscope.aspx
+    taurus:      https://www.astroyogi.com/horoscopes/daily/taurus-free-horoscope.aspx
+    gemini:      https://www.astroyogi.com/horoscopes/daily/gemini-free-horoscope.aspx
+    cancer:      https://www.astroyogi.com/horoscopes/daily/cancer-free-horoscope.aspx
+    leo:         https://www.astroyogi.com/horoscopes/daily/leo-free-horoscope.aspx
+    virgo:       https://www.astroyogi.com/horoscopes/daily/virgo-free-horoscope.aspx
+    libra:       https://www.astroyogi.com/horoscopes/daily/libra-free-horoscope.aspx
+    scorpio:     https://www.astroyogi.com/horoscopes/daily/scorpio-free-horoscope.aspx
+    sagittarius: https://www.astroyogi.com/horoscopes/daily/sagittarius-free-horoscope.aspx
+    capricorn:   https://www.astroyogi.com/horoscopes/daily/capricorn-free-horoscope.aspx
+    aquarius:    https://www.astroyogi.com/horoscopes/daily/aquarius-free-horoscope.aspx
+    pisces:      https://www.astroyogi.com/horoscopes/daily/pisces-free-horoscope.aspx
+  'selector': ["span", "id": "ContentPlaceHolder1_LblPrediction"]
+  'selector_is_unique': true
+  'use_regex': true
+  'match_start': ''
+  'match_end': 'Click here for a more personalised reading'
+
+elle:
+  'urls':
+    aries:       https://www.elle.com/horoscopes/daily/a60/aries-daily-horoscope/
+    taurus:      https://www.elle.com/horoscopes/daily/a98/taurus-daily-horoscope/
+    gemini:      https://www.elle.com/horoscopes/daily/a99/gemini-daily-horoscope/
+    cancer:      https://www.elle.com/horoscopes/daily/a100/cancer-daily-horoscope/
+    leo:         https://www.elle.com/horoscopes/daily/a101/leo-daily-horoscope/
+    virgo:       https://www.elle.com/horoscopes/daily/a102/virgo-daily-horoscope/
+    libra:       https://www.elle.com/horoscopes/daily/a103/libra-daily-horoscope/
+    scorpio:     https://www.elle.com/horoscopes/daily/a104/scorpio-daily-horoscope/
+    sagittarius: https://www.elle.com/horoscopes/daily/a105/sagittarius-daily-horoscope/
+    capricorn:   https://www.elle.com/horoscopes/daily/a106/capricorn-daily-horoscope/
+    aquarius:    https://www.elle.com/horoscopes/daily/a107/aquarius-daily-horoscope/
+    pisces:      https://www.elle.com/horoscopes/daily/a108/pisces-daily-horoscope/
+  'selector': ["p", "class": "body-text"]
+  'selector_is_unique': true
+  'use_regex': false
+
