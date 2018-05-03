@@ -5,7 +5,8 @@ with open('version.txt') as file:
     version = file.read().strip()
 
 requirements = [
-      'requests>=2.18.4'
+      'requests>=2.18.4',
+      'scrapeit==1.0.2'
 ]
 dev_requirements = [
       'pytest>=3.5.1'

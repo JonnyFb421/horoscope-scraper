@@ -1,4 +1,4 @@
-horoscope:
+horoscope-com:
   'urls':
     aries:       https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=1
     taurus:      https://www.horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=2
@@ -15,10 +15,10 @@ horoscope:
   'selector': ["div", "class": "horoscope-content"]
   'selector_is_unique': false
   'use_regex': true
-  'match_start': ''
-  'match_end': '\n'
+  'match_after': ''
+  'stop_matching_at': '\n'
 
-astrology:
+astrology-com:
   'urls':
     aries:       https://www.astrology.com/horoscope/daily/aries.html
     taurus:      https://www.astrology.com/horoscope/daily/taurus.html
@@ -35,10 +35,10 @@ astrology:
   'selector': ["div", "class": "daily-horoscope text-center"]
   'selector_is_unique': false
   'use_regex': true
-  'match_start': 'Tomorrow\n\n\n'
-  'match_end': '\n'
+  'match_after': 'Tomorrow\n\n\n'
+  'stop_matching_at': '\n'
 
-astrostyle:
+astrostyle-com:
   urls:
     aries:       http://astrostyle.com/daily-horoscopes/aries-daily-horoscope/
     taurus:      http://astrostyle.com/daily-horoscopes/taurus-daily-horoscope/
@@ -55,10 +55,10 @@ astrostyle:
   'selector': ["div", "class": "weekday_div"]
   'selector_is_unique': false
   'use_regex': true
-  'match_start': 'Weekend'
-  'match_end': ''
+  'match_after': 'Weekend'
+  'stop_matching_at': ''
 
-cainer:
+cainer-com:
   'urls':
     aries:       https://www.cainer.com/daily-horoscope/ariest.html
     taurus:      https://www.cainer.com/daily-horoscope/taurust.html
@@ -75,10 +75,10 @@ cainer:
   'selector': ["p", "align": "justify"]
   'selector_is_unique': false
   'use_regex': true
-  'match_start': ''
-  'match_end': 'The road to the future has its twists and turns'
+  'match_after': ''
+  'stop_matching_at': 'The road to the future has its twists and turns'
 
-clickastro:
+clickastro-com:
   'urls':
     aries:       http://www.clickastro.com/aries-horoscope-daily?ref=HomePage
     taurus:      http://www.clickastro.com/taurus-horoscope-daily?ref=HomePage
@@ -96,7 +96,7 @@ clickastro:
   'selector_is_unique': true
   'use_regex': false
 
-astrocenter:
+astrocenter-com:
   'urls':
     aries:       http://www.astrocenter.com/us/horoscope-daily.aspx?When=0&ZSign=0&Af=0
     taurus:      http://www.astrocenter.com/us/horoscope-daily.aspx?When=0&ZSign=1&Af=0
@@ -114,7 +114,7 @@ astrocenter:
   'selector_is_unique': true
   'use_regex': false
 
-astroyogi:
+astroyogi-com:
   'urls':
     aries:       https://www.astroyogi.com/horoscopes/daily/aries-free-horoscope.aspx
     taurus:      https://www.astroyogi.com/horoscopes/daily/taurus-free-horoscope.aspx
@@ -131,10 +131,10 @@ astroyogi:
   'selector': ["span", "id": "ContentPlaceHolder1_LblPrediction"]
   'selector_is_unique': true
   'use_regex': true
-  'match_start': ''
-  'match_end': 'Click here for a more personalised reading'
+  'match_after': ''
+  'stop_matching_at': 'Click here for a more personalised reading'
 
-elle:
+elle-com:
   'urls':
     aries:       https://www.elle.com/horoscopes/daily/a60/aries-daily-horoscope/
     taurus:      https://www.elle.com/horoscopes/daily/a98/taurus-daily-horoscope/
@@ -151,4 +151,3 @@ elle:
   'selector': ["p", "class": "body-text"]
   'selector_is_unique': true
   'use_regex': false
-

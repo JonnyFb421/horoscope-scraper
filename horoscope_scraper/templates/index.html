@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block scripts %}
+{{ super() }}
+<script src="{{ url_for('static',  filename='js/godzilla.js') }}"></script>
+{% endblock %}
+{% block title %}Horoscope Scraper{% endblock %}
+{% block page_content %}
+
+<div class="row">
+    <h1 class="text-center">Select your Zodiac sign</h1>
+</div>
+
+<div class="row">
+    <div id="aries" class="col-xs-3 sign">
+        <button type="button" class="btn btn-primary btn-lg huge-button">Aries</button></div>
+    <div id="taurus" class="col-xs-3 sign">
+        <button type="button" class="btn btn-primary btn-lg huge-button">Taurus</button></div>
+    <div id="gemini" class="col-xs-3 sign">
+        <button type="button" class="btn btn-primary btn-lg huge-button">Gemini</button></div>
+    <div id="cancer" class="col-xs-3 sign">
+        <button type="button" class="btn btn-primary btn-lg huge-button">Cancer</button></div>
+    <div id="leo" class="col-xs-3 sign">
+        <button type="button" class="btn btn-primary btn-lg huge-button">Leo</button></div>
+    <div id="virgo" class="col-xs-3 sign">
+        <button type="button" class="btn btn-primary btn-lg huge-button">Virgo</button></div>
+    <div id="libra" class="col-xs-3 sign">
+        <button type="button" class="btn btn-primary btn-lg huge-button">Libra</button></div>
+    <div id="scorpio" class="col-xs-3 sign">
+        <button type="button" class="btn btn-primary btn-lg huge-button">Scorpio</button></div>
+    <div id="sagittarius" class="col-xs-3 sign">
+        <button type="button" class="btn btn-primary btn-lg huge-button">Sagittarius</button></div>
+    <div id="capricorn" class="col-xs-3 sign">
+        <button type="button" class="btn btn-primary btn-lg huge-button">Capricorn</button></div>
+    <div id="aquarius" class="col-xs-3 sign">
+        <button type="button" class="btn btn-primary btn-lg huge-button">Aquarius</button></div>
+    <div id="pisces" class="col-xs-3 sign">
+        <button type="button" class="btn btn-primary btn-lg huge-button">Pisces</button></div>
+    </div>
+
+<div class="row">
+
+    <div class="col-xs-12 sign">
+        <div class="panel panel-default text-center panel-header-red">
+            <div class="panel-heading panel-header-red">horoscope.com</div>
+            <div id="horoscope-com" class="panel-body"></div>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12 sign">
+        <div class="panel panel-default text-center panel-header-red">
+            <div class="panel-heading panel-header-red">astrology.com</div>
+            <div id="astrology-com" class="panel-body"></div>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12 sign">
+        <div class="panel panel-default text-center panel-header-red">
+            <div class="panel-heading panel-header-red">astrostyle.com</div>
+            <div id="astrostyle-com" class="panel-body"></div>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12 sign">
+        <div class="panel panel-default text-center panel-header-red">
+            <div class="panel-heading panel-header-red">cainer.com</div>
+            <div id="cainer-com" class="panel-body"></div>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12 sign">
+        <div class="panel panel-default text-center panel-header-red">
+            <div class="panel-heading panel-header-red">clickastro.com</div>
+            <div id="clickastro-com" class="panel-body"></div>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12 sign">
+        <div class="panel panel-default text-center panel-header-red">
+            <div class="panel-heading panel-header-red">astrocenter.com</div>
+            <div id="astrocenter-com" class="panel-body"></div>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12 sign">
+        <div class="panel panel-default text-center panel-header-red">
+            <div class="panel-heading panel-header-red">astroyogi.com</div>
+            <div id="astroyogi-com" class="panel-body"></div>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12 sign">
+        <div class="panel panel-default text-center panel-header-red">
+            <div class="panel-heading panel-header-red">elle.com</div>
+            <div id="elle-com" class="panel-body"></div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
