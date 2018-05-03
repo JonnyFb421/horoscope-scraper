@@ -1,0 +1,1 @@
+![Showing application use](https://raw.githubusercontent.com/JonnyFb421/horoscope-scraper/master/assets/demo.gif)
