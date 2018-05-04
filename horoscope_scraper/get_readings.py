@@ -18,7 +18,7 @@ class GetReadings():
     def set_config(self):
         config_file = pkg_resources.resource_filename(
             __name__,
-            os.path.abspath(os.path.join('config', 'pages.yaml'))
+            'config/pages.yaml'
         )
         with open(config_file) as file:
             config = yaml.safe_load(file)
