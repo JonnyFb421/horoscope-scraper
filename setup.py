@@ -12,7 +12,8 @@ requirements = [
     'scrapeit==1.0.2'
 ]
 dev_requirements = [
-      'pytest>=3.5.1'
+      'pytest>=3.5.1',
+      'pytest-cov>=2.5.1'
 ]
 resources = os.path.join('config', '*.yaml')
 

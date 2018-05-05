@@ -51,7 +51,7 @@ class GetReadings():
         """
         available_sings = self.get_valid_signs()
         if sign.lower() in available_sings:
-            return sign
+            return sign.lower()
         else:
             raise SignNotFound(SignNotFound.__doc__)
 

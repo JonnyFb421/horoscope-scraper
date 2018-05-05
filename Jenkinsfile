@@ -1,21 +1,17 @@
 pipeline {
-    agent any
+    agent { dockerfile true }
 
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
+            stage('Install Testing Dependencies') {
+                steps {
+                    sh "whoami"
+                    sh "pip install --user .[dev]"
+                }
+            }
+            stage('Run Tests') {
+                steps {
+                    sh "py.test --cov=horoscope_scraper tests/"
+                    }
+                }
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
-}

@@ -38,6 +38,6 @@ def test_get_valid_signs():
 
 
 def test_set_sign_with_valid_sign():
-    sign = 'pisCes'
-    result = GetReadings(sign).get_valid_signs()
-    assert result == sign
+    sign = 'pisceS'
+    result = GetReadings(sign).set_sign(sign)
+    assert result == sign.lower()
