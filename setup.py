@@ -25,6 +25,7 @@ setup(name='horoscope_scraper',
       url='https://github.com/JonnyFb421',
       install_requires=requirements,
       extras_require={'dev': dev_requirements},
-      packages=['horoscope_scraper'],
+      packages=['horoscope_scraper', 'horoscope_scraper.api',
+                'horoscope_scraper.views'],
       package_data={'horoscope_scraper': [resources]},
       )
