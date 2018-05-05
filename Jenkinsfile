@@ -4,7 +4,6 @@ pipeline {
     stages {
             stage('Install Testing Dependencies') {
                 steps {
-                    sh "whoami"
                     sh "pip install --user .[dev]"
                 }
             }
