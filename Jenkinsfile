@@ -1,6 +1,7 @@
 pipeline {
     agent any
     environment {
+        PATH = 'jonnyfb421/horoscope-scraper'
         IMAGE_NAME = 'jonnyfb421/horoscope-scraper'
         VERSION = sh(script:"cat ./version.txt", returnStdout: true)
         IMAGE_TAG = '$IMAGE_NAME:$VERSION'
@@ -16,6 +17,18 @@ pipeline {
                 steps {
                     sh "pip install --user .[dev]"
                     sh "py.test --cov=horoscope_scraper --cov-report xml --junitxml=junit-results.xml tests/"
+                }
+            }
+            stage('Bump version') {
+                when { branch 'master' }
+                agent { dockerfile true }
+                steps {
+                    script {
+                        sh "pip install --upgrade --user bumpversion"
+                        sh "git stash; git checkout master; git pull"
+                        sh "bumpversion patch"
+                        sh "git push origin master"
+                    }
                 }
             }
             stage('Push production image') {
