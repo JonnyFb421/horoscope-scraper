@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-                IMAGE_NAME = 'jonnyfb421/horoscope-scraper'
+        IMAGE_NAME = 'jonnyfb421/horoscope-scraper'
         VERSION = sh(script:"cat ./version.txt", returnStdout: true)
         IMAGE_TAG = '$IMAGE_NAME:$VERSION'
     }
@@ -19,6 +19,7 @@ pipeline {
                 }
             }
             stage('Push production image') {
+                when { branch 'master' }
                 steps {
                     script {
                         withDockerRegistry([ credentialsId: "dockerhub-creds", url: "" ]) {
@@ -28,6 +29,7 @@ pipeline {
                 }
             }
             stage('Deploying the new version') {
+                when { branch 'master' }
                 steps {
                     script {
                         withCredentials(bindings: [sshUserPrivateKey(credentialsId: 'ssh-ec2-horoscope-scraper', \
