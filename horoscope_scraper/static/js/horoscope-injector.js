@@ -4,8 +4,9 @@ $( document ).ready(function() {
         $.getJSON( endpoint, function( data ) {
             $.each( data, function( key, val ) {
                 $('#' + key).text(val);
+            })
+            location.href = "#" + "readings"
             }
-        )}
     )}
 )}
 )
