@@ -32,10 +32,7 @@ pipeline {
                     script {
                         withCredentials(bindings: [sshUserPrivateKey(credentialsId: 'ssh-ec2-horoscope-scraper', \
                                                                      keyFileVariable: 'SSH_KEY')]) {
-                            sh '''
-                            ssh -tt -i $SSH_KEY ec2-user@52.14.201.238
-                            sudo docker kill $(docker ps -q)
-                            '''
+                            sh "ssh -oStrictHostKeyChecking=no -tt -i ~/.ssh/jonny.pem ec2-user@52.14.201.238 sudo docker run -p 80:5000 $IMAGE_TAG"
                         }
                     }
                 }
