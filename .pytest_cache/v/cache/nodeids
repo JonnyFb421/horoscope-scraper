@@ -1,0 +1,6 @@
+[
+  "tests/test_get_readings.py::test_get_readings_init_with_bad_sign",
+  "tests/test_get_readings.py::test_get_readings_init_config_not_none",
+  "tests/test_get_readings.py::test_get_valid_signs",
+  "tests/test_get_readings.py::test_set_sign_with_valid_sign"
+]
