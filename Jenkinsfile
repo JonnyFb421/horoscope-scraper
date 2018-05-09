@@ -36,9 +36,9 @@ pipeline {
                                                                      keyFileVariable: 'SSH_KEY')]) {
                             def running_container = sh (script: "ssh -oStrictHostKeyChecking=no -i ~/.ssh/jonny.pem ec2-user@52.14.201.238 sudo docker ps -qf \"label=$IMAGE_NAME\"", returnStdout: true)
                             if (running_container) {
-                                sh "ssh -oStrictHostKeyChecking=no -i ~/.ssh/jonny.pem ec2-user@52.14.201.238 sudo docker kill ${running_container}"
+                                sh "ssh -oStrictHostKeyChecking=no -i $SSH_KEY ec2-user@52.14.201.238 sudo docker kill ${running_container}"
                             }
-                            sh "ssh -oStrictHostKeyChecking=no -i ~/.ssh/jonny.pem ec2-user@52.14.201.238 sudo docker run -d -p 80:5000 -l $IMAGE_NAME $IMAGE_TAG"
+                            sh "ssh -oStrictHostKeyChecking=no -i $SSH_KEY sudo docker run -d -p 80:5000 -l $IMAGE_NAME $IMAGE_TAG"
                         }
                     }
                 }
