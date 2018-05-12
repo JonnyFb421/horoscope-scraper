@@ -38,7 +38,7 @@ pipeline {
                             if (running_container) {
                                 sh "ssh -oStrictHostKeyChecking=no -i $SSH_KEY ec2-user@52.14.201.238 sudo docker kill ${running_container}"
                             }
-                            sh "ssh -oStrictHostKeyChecking=no -i $SSH_KEY sudo docker run -d -p 80:5000 -l $IMAGE_NAME $IMAGE_TAG"
+                            sh "ssh -oStrictHostKeyChecking=no -i $SSH_KEY ec2-user@52.14.201.238 sudo docker run -d -p 80:5000 -l $IMAGE_NAME $IMAGE_TAG"
                         }
                     }
                 }
