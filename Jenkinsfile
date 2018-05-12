@@ -30,16 +30,17 @@ pipeline {
             }
             stage('Deploying the new version') {
                 when { branch 'master' }
+                    environment {
+                        PROD_PEM = credentials('prod_pem')
+                        PROD_INSTANCE = credentials('horoscope_scraper_prod')
+                    }
                 steps {
                     script {
-                        withCredentials(bindings: [sshUserPrivateKey(credentialsId: 'ssh-ec2-horoscope-scraper', \
-                                                                     keyFileVariable: 'SSH_KEY')]) {
-                            def running_container = sh (script: "ssh -oStrictHostKeyChecking=no -i ~/.ssh/jonny.pem ec2-user@52.14.201.238 sudo docker ps -qf \"label=$IMAGE_NAME\"", returnStdout: true)
+                            def running_container = sh (script: "ssh -oStrictHostKeyChecking=no -i $PROD_PEM $PROD_INSTANCE sudo docker ps -qf \"label=$IMAGE_NAME\"", returnStdout: true)
                             if (running_container) {
-                                sh "ssh -oStrictHostKeyChecking=no -i $SSH_KEY ec2-user@52.14.201.238 sudo docker kill ${running_container}"
+                                sh "ssh -oStrictHostKeyChecking=no -i $PROD_PEM $PROD_INSTANCE sudo docker kill ${running_container}"
                             }
-                            sh "ssh -oStrictHostKeyChecking=no -i $SSH_KEY ec2-user@52.14.201.238 sudo docker run -d -p 80:5000 -l $IMAGE_NAME $IMAGE_TAG"
-                        }
+                            sh "ssh -oStrictHostKeyChecking=no -i $PROD_PEM $PROD_INSTANCE sudo docker run -d -p 80:5000 -l $IMAGE_NAME $IMAGE_TAG"
                     }
                 }
             }
