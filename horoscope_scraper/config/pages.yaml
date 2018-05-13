@@ -58,7 +58,7 @@ astrostyle-com:
   'use_regex': true
   'match_after': ''
   'stop_matching_at': ''
-  match_after_strftime: ['%A, %b %d, %Y', '', -1]
+  match_after_strftime: ['%A, %b %d, %Y', '', 0]
   timezone: 'America/Los_Angeles'
 
 cainer-com:
