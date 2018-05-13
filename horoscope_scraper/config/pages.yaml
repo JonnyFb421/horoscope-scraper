@@ -16,6 +16,7 @@ horoscope-com:
   'selector_is_unique': false
   'use_regex': true
   'match_after': ''
+  'match_after_strftime': ['%B %d, %Y', ' -', 0]
   'stop_matching_at': '\n'
 
 astrology-com:
