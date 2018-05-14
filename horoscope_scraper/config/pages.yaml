@@ -15,9 +15,9 @@ horoscope-com:
   'selector': ["div", "class": "horoscope-content"]
   'selector_is_unique': false
   'use_regex': true
-  'match_after': ['']
   'match_after_strftime': ['%B %d, %Y', ' -', 0]
   'stop_matching_at': ["\n", ""]
+  timezone: 'America/Los_Angeles'
 
 astrology-com:
   'urls':
@@ -36,9 +36,8 @@ astrology-com:
   'selector': ["p", []]
   'selector_is_unique': true
   'use_regex': true
-  'match_after': ['']
   'match_after_strftime': ['%B %d, %Y', ': ', 0]
-  'stop_matching_at': ['']
+  timezone: 'America/Los_Angeles'
 
 astrostyle-com:
   urls:
@@ -57,10 +56,8 @@ astrostyle-com:
   'selector': ["div", "class": "weekday_div"]
   'selector_is_unique': false
   'use_regex': true
-  'match_after': ['']
-  'stop_matching_at': ['']
   match_after_strftime: ['%A, %b %d, %Y', '', 0]
-  timezone: 'America/Los_Angeles'
+  stop_matching_at_strftime: ['%A, %b %d, %Y', '', -1]
 
 cainer-com:
   'urls':
@@ -81,6 +78,7 @@ cainer-com:
   'use_regex': true
   'match_after': ['']
   'stop_matching_at': ['The road to the future has its twists and turns']
+  timezone: 'America/Los_Angeles'
 
 clickastro-com:
   'urls':
@@ -99,6 +97,7 @@ clickastro-com:
   'selector': ["div", "id": "today-pred"]
   'selector_is_unique': true
   'use_regex': false
+  timezone: 'America/Los_Angeles'
 
 astrocenter-com:
   'urls':
@@ -117,6 +116,7 @@ astrocenter-com:
   'selector': ["div", "id": "textline"]
   'selector_is_unique': true
   'use_regex': false
+  timezone: 'America/Los_Angeles'
 
 astroyogi-com:
   'urls':
@@ -137,6 +137,7 @@ astroyogi-com:
   'use_regex': true
   'match_after': ['']
   'stop_matching_at': ['Click here for a more personalised reading']
+  timezone: 'America/Los_Angeles'
 
 elle-com:
   'urls':
@@ -155,3 +156,4 @@ elle-com:
   'selector': ["p", "class": "body-text"]
   'selector_is_unique': true
   'use_regex': false
+  timezone: 'America/Los_Angeles'
