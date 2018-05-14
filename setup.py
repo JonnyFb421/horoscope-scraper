@@ -9,7 +9,7 @@ requirements = [
     'flask_bootstrap==3.3.7.1',
     'ruamel.yaml==0.15.37',
     'requests>=2.18.4',
-    'scrapeit==1.1.1'
+    'scrapeit==1.1.2'
 ]
 dev_requirements = [
       'bumpversion>=0.5.3',
